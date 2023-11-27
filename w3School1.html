@@ -1,0 +1,23 @@
+<body>
+    <div id="changeColor"></div>
+    <button id="clickbutton">Click Here</button>
+    <p id="demo"></p>
+
+
+</body>
+<script>
+    const clickHere = document.getElementById("clickbutton");
+    const result = document.getElementById("demo");
+    const changeColor = document.getElementById("changeColor");
+    
+    clickHere.addEventListener("onmouseover",() =>{
+        changeColor.style.backgroundColor ='red';
+    })
+
+   
+    clickHere.addEventListener("click",() => {
+        result.innerHTML = Date();
+    })
+    
+</script>
+

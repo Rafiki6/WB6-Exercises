@@ -1,0 +1,14 @@
+<body>
+    <button id="onclick">Try it</button>
+    <p id="demo">Please visit Microsoft! Microsoft</p>
+
+</body>
+<script>
+    const clickbutton = document.getElementById("onclick");
+    const demoReplace = document.getElementById("demo");
+
+    clickbutton.addEventListener("click", ()=>{
+        const text =demoReplace.textContent.replace(/Microsoft/g,"W3School");
+       demoReplace.textContent = text.toUpperCase();
+    })
+</script>

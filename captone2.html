@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./scripts/location-data.js"></script>
+    <script src="./scripts/park-type-data.js"></script>
+    <script src="./scripts/national-park-data.js"></script>
+</head>
+<body>
+    <select name="parkLocation" id="parkLocation">
+        <option value="">--Select Location---</option>
+    </select>
+    <select name="parkType" id="parkType">
+        <option value="">---Select Park Type---</option>
+    </select>
+    <div id="result"></div>
+</body>
+<script>
+    const result = document.getElementById("result");
+    const parkLocation = document.getElementById("parkLocation");
+    const parkType = document.getElementById("parkType");
+
+
+ locationsArray.forEach(s => parkLocation.innerHTML += `<option> ${s}</option>`);
+ parkTypesArray.forEach(s => parkType.innerHTML += `<option> ${s}</option>`)
+ 
+ const showPark = p => result.innerHTM += p.LocationName +" "+p.State +"<br>";
+    function showResult(){
+        result.innerHTM ="";
+        nationalParksArray.forEach(p => {
+
+           if(
+            (parkLocation == "" || p.State == parkLocation)&&
+           (parkType == "" || p.parkType == parkType)
+           ){
+           }
+        })
+
+    }
+    parkLocation.onchange = showResult;
+    parkType.onchange =showResult;
+    
+    showResult();
+
+</script>
+</html>
